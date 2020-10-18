@@ -1,40 +1,59 @@
-<form>
-    <div class="form-group">
-        <label for="Name">Name</label>
-        <input id="Name" type="text" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input id="email" type="text" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label>Feedback</label>
-        <div class="form-control">
-            <label class="radio-inline">
-                <input type="radio" value="great" name="feedback">
-                Great
-            </label>
-            <label class="radio-inline">
-                <input type="radio" value="okay" name="feedback">
-                Okay
-            </label>
-            <label class="radio-inline">
-                <input type="radio" value="not good" name="feedback">
-                Not Good
-            </label>
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Feedback Form</h3>
 
         </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label class="col-sm-2 control label" for="name">Name:</label>
+                <div class="col-sm-8">
+                    <input id="name" formControlName="name" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control label" for="email">Email:</label>
+                <div class="col-sm-8">
+                    <input id="email" formControlName="email" type="text" class="form-control">
+                </div>
+            </div>
+
+            
+
+            <div class="form-group">
+                <label>Feedback:</label>
+                <div class="form-control">
+                    <label class="radio-inline" for="feedback">
+                        <input type="radio" formControlName="feedback" value="great" name="feedback" class="form-control">
+                        Great
+                    </label>
+                    <label class="radio-inline" for="feedback">
+                        <input type="radio" formControlName="feedback" value="okay" name="feedback" class="form-control">
+                        Okay
+                    </label>
+                    <label class="radio-inline" for="feedback">
+                        <input type="radio" formControlName="feedback" value="not good" name="feedback" class="form-control">
+                        Not Good
+                    </label>
         
+                </div>
+                
+            </div>
+        
+        
+            <div class="form-group">
+                <label for="comments" >Comments:</label>
+                <textarea id="comments" cols="30" rows="10" formControlName="comments" class="form-control"></textarea>
+            </div>
+        
+
+
+        </div>
+
+        <div class="panel-footer">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+
     </div>
-
-
-    <div class="form-group">
-        <label for="comments">Comments</label>
-        <textarea id="comments" cols="30" rows="10" class="form-control"></textarea>
-    </div>
-
-    <button class="btn btn-primary">Submit</button>
-    
 </form>

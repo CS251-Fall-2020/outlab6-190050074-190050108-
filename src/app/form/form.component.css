@@ -1,0 +1,15 @@
+input{ 
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+label {
+   width: 240px;
+   display: inline-block;
+ }
+
+ textarea{
+     padding: 6px;
+     font-size: 14px;
+ }

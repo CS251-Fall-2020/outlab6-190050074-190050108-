@@ -9,7 +9,7 @@ import { CONTACTS } from '../mock-contacts';
 })
 export class ContactPageComponent implements OnInit {
 
-  title = 'To conctact us:';
+  title = 'To contact us:';
 
   contacts = CONTACTS;
 
